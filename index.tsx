@@ -66,7 +66,12 @@ const I18N_DATA = {
       aboutP1:'سايت للتطوير العقاري هي قوة رائدة في سوق العقارات المصري. نحن متخصصون في توفير المساحات المكتبية والتجارية المتميزة المصممة لتمكين الأعمال. محفظتنا هي شهادة على التزامنا بالجودة والاستدامة والموقع الاستراتيجي.',
       aboutP2:'مع وجود واثق في كل محافظة، نجمع بين الخبرة المحلية والمعايير الدولية لتقديم عقارات ليست مجرد مبانٍ، بل معالم للنجاح. مهمتنا هي خلق قيمة لعملائنا ومجتمعاتنا من خلال حلول عقارية مبتكرة ومستدامة.',
       cookieText:'هذا الموقع يستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة.', cookieBtn:'مفهوم',
-      formAlert: 'الرجاء إدخال الاسم ورقم الهاتف.',
+      formAlerts: {
+        nameMissing: 'الرجاء إدخال الاسم.',
+        phoneMissing: 'الرجاء إدخال رقم الهاتف.',
+        phoneInvalid: 'الرجاء إدخال رقم هاتف صحيح مكون من 11 رقمًا (مثال: 01xxxxxxxxx).',
+        emailInvalid: 'الرجاء إدخال بريد إلكتروني صالح.'
+      },
       whatsAppMsg: { name: 'الاسم', phone: 'الهاتف', email: 'البريد', property: 'مهتم بـ', footer: '(مُرسل من موقع SIGHT)' }
     },
     en: {
@@ -82,7 +87,12 @@ const I18N_DATA = {
       aboutP1:'SIGHT Real Estate Development is a leading force in the Egyptian real estate market. We specialize in premium office and commercial spaces designed to empower businesses. Our portfolio reflects a commitment to quality, sustainability, and strategic location.',
       aboutP2:'With a confident presence in every governorate, we pair local expertise with international standards to deliver properties that become landmarks of success. Our mission is to create value for our clients and communities through innovative, sustainable real estate solutions.',
       cookieText:'This website uses cookies to ensure you get the best experience on our website.', cookieBtn:'Got it!',
-      formAlert: 'Please fill in your name and phone number.',
+      formAlerts: {
+        nameMissing: 'Please enter your name.',
+        phoneMissing: 'Please enter your phone number.',
+        phoneInvalid: 'Please enter a valid 11-digit Egyptian phone number (e.g. 01xxxxxxxxx).',
+        emailInvalid: 'Please enter a valid email address.'
+      },
       whatsAppMsg: { name: 'Name', phone: 'Phone', email: 'Email', property: 'Interested in', footer: '(Sent from SIGHT website)' }
     }
 };
@@ -102,6 +112,7 @@ const DOMElements = {
   dotsContainer: document.getElementById('dots'),
   galleryGrid: document.getElementById('galleryGrid'),
   formMsg: document.getElementById('formMsg'),
+  propertySearch: document.getElementById('propertySearch'),
 };
 
 // ===== RENDER FUNCTIONS =====
@@ -111,8 +122,12 @@ function renderSlides() {
   `).join('');
 }
 
-function renderProperties() {
-  DOMElements.galleryGrid.innerHTML = PROPERTIES_DATA.map(prop => `
+function renderProperties(properties = PROPERTIES_DATA) {
+  if (properties.length === 0) {
+    DOMElements.galleryGrid.innerHTML = `<p class="no-results">No properties found matching your search.</p>`;
+    return;
+  }
+  DOMElements.galleryGrid.innerHTML = properties.map(prop => `
     <article class="card">
       <div class="thumb" style="background-image:url('${prop.img}')"></div>
       <div class="card-body">
@@ -148,16 +163,36 @@ function applyLang(lang) {
 }
 
 function handleWhatsAppSend() {
-  // FIX: Cast elements to HTMLInputElement to access the 'value' property.
   const name = (document.getElementById('fName') as HTMLInputElement).value.trim();
   const phone = (document.getElementById('fPhone') as HTMLInputElement).value.trim();
   const email = (document.getElementById('fEmail') as HTMLInputElement).value.trim();
   
   DOMElements.formMsg.textContent = ''; // Clear previous messages
   
-  if (!name || !phone) {
-    DOMElements.formMsg.textContent = I18N_DATA[state.lang].formAlert;
+  const formAlerts = I18N_DATA[state.lang].formAlerts;
+
+  if (!name) {
+    DOMElements.formMsg.textContent = formAlerts.nameMissing;
     return;
+  }
+  
+  if (!phone) {
+    DOMElements.formMsg.textContent = formAlerts.phoneMissing;
+    return;
+  }
+  
+  const phoneRegex = /^01\d{9}$/;
+  if (!phoneRegex.test(phone)) {
+      DOMElements.formMsg.textContent = formAlerts.phoneInvalid;
+      return;
+  }
+  
+  if (email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      DOMElements.formMsg.textContent = formAlerts.emailInvalid;
+      return;
+    }
   }
   
   const dict = I18N_DATA[state.lang].whatsAppMsg;
@@ -282,6 +317,15 @@ function initEventListeners() {
     const targetPanel = document.getElementById((btn as HTMLElement).dataset.target);
     if (targetPanel) targetPanel.classList.add('show');
   }));
+
+  // Property Search
+  DOMElements.propertySearch.addEventListener('keyup', () => {
+    const searchTerm = (DOMElements.propertySearch as HTMLInputElement).value.toLowerCase().trim();
+    const filteredProperties = PROPERTIES_DATA.filter(prop => 
+      prop.title.toLowerCase().includes(searchTerm)
+    );
+    renderProperties(filteredProperties);
+  });
 }
 
 // ===== INITIALIZATION =====

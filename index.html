@@ -15,7 +15,8 @@
 {
   "imports": {
     "path": "https://aistudiocdn.com/path@^0.12.7",
-    "vite": "https://aistudiocdn.com/vite@^7.1.7"
+    "vite": "https://aistudiocdn.com/vite@^7.1.7",
+    "url": "https://aistudiocdn.com/url@^0.11.4"
   }
 }
 </script>
@@ -94,6 +95,9 @@
     <section id="gallery" class="section">
       <div class="container">
         <h2 class="section-title" data-i18n="galleryTitle">PROPERTY GALLERY</h2>
+        <div class="search-wrapper">
+          <input type="search" id="propertySearch" class="search-input" data-i18n-placeholder="searchPlaceholder" placeholder="Search properties…">
+        </div>
         <div class="grid" id="galleryGrid">
           <!-- Property cards will be injected here by JavaScript -->
         </div>
