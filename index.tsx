@@ -1,5 +1,3 @@
-
-
 // ===== DATA: SLIDES =====
 const SLIDES_DATA = [
   { img: 'https://i.ibb.co/99MV2rn0/10.png' },
@@ -51,83 +49,94 @@ const PROPERTIES_DATA = [
   }
 ];
 
-// ===== DATA: I18N (TRANSLATIONS) =====
+// ===== I18N =====
 const I18N_DATA = {
-    ar: {
-      navProps:'العقارات', navContact:'تواصل', navAbout:'عنّا',
-      heroTitle:'SIGHT REAL ESTATE <strong>DEVELOPMENT</strong>', heroTag:'حلول مستدامة ومواقع استراتيجية للمكاتب والمساحات التجارية.',
-      ctaView:'تصفُّح المعروض', ctaWhatsapp:'واتساب',
-      galleryTitle:'معرض العقارات', searchPlaceholder:'ابحث عن عقار…',
-      featureTitle:'عيش استقلالك في مزارين', rooms:'غرف', baths:'حمام', garage:'جراج', kitchen:'مطبخ', downpayment:'المقدم',
-      featureBullets:'شقق متشطبة بالكامل (غاز ومياه وكهرباء). واجهات حديثة وتصميم أنيق. موقع استراتيجي بجوار ركسوس ومارينا 7. استلام خلال 6 شهور — تقسيط حتى 15 سنة.',
-      bookNow:'احجز الآن',
-      formTitle:'اترك بياناتك ونتواصل معك', name:'الاسم', email:'البريد', phone:'موبايل', namePh:'اسمك', emailPh:'example@mail.com', phonePh:'0100 000 0000', sendWhats:'إرسال عبر واتساب',
-      aboutTab:'عن SIGHT', locTab:'مواقعنا', connectTitle:'تواصل معنا',
-      aboutP1:'سايت للتطوير العقاري هي قوة رائدة في سوق العقارات المصري. نحن متخصصون في توفير المساحات المكتبية والتجارية المتميزة المصممة لتمكين الأعمال. محفظتنا هي شهادة على التزامنا بالجودة والاستدامة والموقع الاستراتيجي.',
-      aboutP2:'مع وجود واثق في كل محافظة، نجمع بين الخبرة المحلية والمعايير الدولية لتقديم عقارات ليست مجرد مبانٍ، بل معالم للنجاح. مهمتنا هي خلق قيمة لعملائنا ومجتمعاتنا من خلال حلول عقارية مبتكرة ومستدامة.',
-      cookieText:'هذا الموقع يستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة.', cookieBtn:'مفهوم',
-      formAlerts: {
-        nameMissing: 'الرجاء إدخال الاسم.',
-        phoneMissing: 'الرجاء إدخال رقم الهاتف.',
-        phoneInvalid: 'الرجاء إدخال رقم هاتف صحيح مكون من 11 رقمًا (مثال: 01xxxxxxxxx).',
-        emailInvalid: 'الرجاء إدخال بريد إلكتروني صالح.'
-      },
-      whatsAppMsg: { name: 'الاسم', phone: 'الهاتف', email: 'البريد', property: 'مهتم بـ', footer: '(مُرسل من موقع SIGHT)' }
+  ar: {
+    navProps:'العقارات', navContact:'تواصل', navAbout:'عنّا',
+    heroTitle:'SIGHT REAL ESTATE <strong>DEVELOPMENT</strong>', heroTag:'حلول مستدامة ومواقع استراتيجية للمكاتب والمساحات التجارية.',
+    ctaView:'تصفُّح المعروض', ctaWhatsapp:'واتساب',
+    galleryTitle:'معرض العقارات', searchPlaceholder:'ابحث عن عقار…',
+    featureTitle:'عيش استقلالك في مزارين', rooms:'غرف', baths:'حمام', garage:'جراج', kitchen:'مطبخ', downpayment:'المقدم',
+    featureBullets:'شقق متشطبة بالكامل (غاز ومياه وكهرباء). واجهات حديثة وتصميم أنيق. موقع استراتيجي بجوار ركسوس ومارينا 7. استلام خلال 6 شهور — تقسيط حتى 15 سنة.',
+    bookNow:'احجز الآن',
+    formTitle:'اترك بياناتك ونتواصل معك', name:'الاسم', email:'البريد', phone:'موبايل', namePh:'اسمك', emailPh:'example@mail.com', phonePh:'0100 000 0000', sendWhats:'إرسال عبر واتساب',
+    aboutTab:'عن SIGHT', locTab:'مواقعنا', connectTitle:'تواصل معنا',
+    aboutP1:'سايت للتطوير العقاري هي قوة رائدة في سوق العقارات المصري...',
+    aboutP2:'مع وجود واثق في كل محافظة...',
+    cookieText:'هذا الموقع يستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة.', cookieBtn:'مفهوم',
+    formAlerts: {
+      nameMissing: 'الرجاء إدخال الاسم.',
+      phoneMissing: 'الرجاء إدخال رقم الهاتف.',
+      phoneInvalid: 'الرجاء إدخال رقم هاتف صحيح مكون من 11 رقمًا (مثال: 01xxxxxxxxx).',
+      emailInvalid: 'الرجاء إدخال بريد إلكتروني صالح.'
     },
-    en: {
-      navProps:'Properties', navContact:'Contact', navAbout:'About',
-      heroTitle:'SIGHT REAL ESTATE <strong>DEVELOPMENT</strong>', heroTag:'Sustainable solutions and strategic locations for office & commercial spaces.',
-      ctaView:'View Gallery', ctaWhatsapp:'WhatsApp',
-      galleryTitle:'PROPERTY GALLERY', searchPlaceholder:'Search properties…',
-      featureTitle:'Live Your Independence in Mazarine', rooms:'Bedrooms', baths:'Bathrooms', garage:'Garage', kitchen:'Kitchen', downpayment:'Down payment',
-      featureBullets:'Fully finished apartments with gas, water, and electricity. Modern facades and elegant architecture. Strategic location near Rixos & Marina 7. Delivery within 6 months — Installments up to 15 years.',
-      bookNow:'Book Now',
-      formTitle:'Leave your info & we will contact you', name:'Name', email:'Email', phone:'Phone', namePh:'Your name', emailPh:'your@email.com', phonePh:'0100 000 0000', sendWhats:'Send via WhatsApp',
-      aboutTab:'About SIGHT', locTab:'Our Locations', connectTitle:'Connect With Us',
-      aboutP1:'SIGHT Real Estate Development is a leading force in the Egyptian real estate market. We specialize in premium office and commercial spaces designed to empower businesses. Our portfolio reflects a commitment to quality, sustainability, and strategic location.',
-      aboutP2:'With a confident presence in every governorate, we pair local expertise with international standards to deliver properties that become landmarks of success. Our mission is to create value for our clients and communities through innovative, sustainable real estate solutions.',
-      cookieText:'This website uses cookies to ensure you get the best experience on our website.', cookieBtn:'Got it!',
-      formAlerts: {
-        nameMissing: 'Please enter your name.',
-        phoneMissing: 'Please enter your phone number.',
-        phoneInvalid: 'Please enter a valid 11-digit Egyptian phone number (e.g. 01xxxxxxxxx).',
-        emailInvalid: 'Please enter a valid email address.'
-      },
-      whatsAppMsg: { name: 'Name', phone: 'Phone', email: 'Email', property: 'Interested in', footer: '(Sent from SIGHT website)' }
-    }
+    whatsAppMsg: { name: 'الاسم', phone: 'الهاتف', email: 'البريد', property: 'مهتم بـ', footer: '(مُرسل من موقع SIGHT)' }
+  },
+  en: {
+    navProps:'Properties', navContact:'Contact', navAbout:'About',
+    heroTitle:'SIGHT REAL ESTATE <strong>DEVELOPMENT</strong>', heroTag:'Sustainable solutions and strategic locations for office & commercial spaces.',
+    ctaView:'View Gallery', ctaWhatsapp:'WhatsApp',
+    galleryTitle:'PROPERTY GALLERY', searchPlaceholder:'Search properties…',
+    featureTitle:'Live Your Independence in Mazarine', rooms:'Bedrooms', baths:'Bathrooms', garage:'Garage', kitchen:'Kitchen', downpayment:'Down payment',
+    featureBullets:'Fully finished apartments with gas, water, and electricity...',
+    bookNow:'Book Now',
+    formTitle:'Leave your info & we will contact you', name:'Name', email:'Email', phone:'Phone', namePh:'Your name', emailPh:'your@email.com', phonePh:'0100 000 0000', sendWhats:'Send via WhatsApp',
+    aboutTab:'About SIGHT', locTab:'Our Locations', connectTitle:'Connect With Us',
+    aboutP1:'SIGHT Real Estate Development is a leading force...',
+    aboutP2:'With a confident presence in every governorate...',
+    cookieText:'This website uses cookies to ensure you get the best experience on our website.', cookieBtn:'Got it!',
+    formAlerts: {
+      nameMissing: 'Please enter your name.',
+      phoneMissing: 'Please enter your phone number.',
+      phoneInvalid: 'Please enter a valid 11-digit Egyptian phone number (e.g. 01xxxxxxxxx).',
+      emailInvalid: 'Please enter a valid email address.'
+    },
+    whatsAppMsg: { name: 'Name', phone: 'Phone', email: 'Email', property: 'Interested in', footer: '(Sent from SIGHT website)' }
+  }
 };
 
 // ===== GLOBAL STATE =====
-let state = {
+let state: {
+  lang: 'en' | 'ar';
+  sliderIdx: number;
+  sliderTimer: any;
+  selectedProperty: string | null;
+} = {
   lang: 'en',
   sliderIdx: 0,
   sliderTimer: null,
-  selectedProperty: null,
+  selectedProperty: null
 };
 
-// ===== DOM ELEMENTS =====
-const DOMElements = {
-  html: document.documentElement,
-  slidesContainer: document.getElementById('slides'),
-  dotsContainer: document.getElementById('dots'),
-  galleryGrid: document.getElementById('galleryGrid'),
-  formMsg: document.getElementById('formMsg'),
-  propertySearch: document.getElementById('propertySearch'),
-};
+// ===== LAZY DOM RESOLVER =====
+function getDOM() {
+  const html = document.documentElement;
+  const slidesContainer = document.getElementById('slides');
+  const dotsContainer = document.getElementById('dots');
+  const galleryGrid = document.getElementById('galleryGrid');
+  const formMsg = document.getElementById('formMsg');
+  const propertySearch = document.getElementById('propertySearch') as HTMLInputElement | null;
+  return { html, slidesContainer, dotsContainer, galleryGrid, formMsg, propertySearch };
+}
 
 // ===== RENDER FUNCTIONS =====
 function renderSlides() {
-  DOMElements.slidesContainer.innerHTML = SLIDES_DATA.map((slide, i) => `
-    <div class="slide ${i === 0 ? 'is-active' : ''}" style="background-image:url('${slide.img}')"></div>
-  `).join('');
+  const { slidesContainer } = getDOM();
+  if (!slidesContainer) return console.warn('[ui] #slides not found');
+  slidesContainer.innerHTML = SLIDES_DATA.map((slide, i) =>
+    `<div class="slide ${i === 0 ? 'is-active' : ''}" style="background-image:url('${slide.img}')"></div>`
+  ).join('');
 }
 
 function renderProperties(properties = PROPERTIES_DATA) {
+  const { galleryGrid } = getDOM();
+  if (!galleryGrid) return console.warn('[ui] #galleryGrid not found');
+
   if (properties.length === 0) {
-    DOMElements.galleryGrid.innerHTML = `<p class="no-results">No properties found matching your search.</p>`;
+    galleryGrid.innerHTML = `<p class="no-results">No properties found matching your search.</p>`;
     return;
   }
-  DOMElements.galleryGrid.innerHTML = properties.map(prop => `
+  galleryGrid.innerHTML = properties.map(prop => `
     <article class="card">
       <div class="thumb" style="background-image:url('${prop.img}')"></div>
       <div class="card-body">
@@ -140,211 +149,181 @@ function renderProperties(properties = PROPERTIES_DATA) {
       </div>
     </article>
   `).join('');
-  
-  // Re-attach listeners after rendering
+
   attachBookingButtonListeners();
 }
 
-// ===== LOGIC & HANDLERS =====
-function applyLang(lang) {
+function renderDots() {
+  const { dotsContainer } = getDOM();
+  if (!dotsContainer) return;
+
+  dotsContainer.innerHTML = SLIDES_DATA.map((_, i) =>
+    `<b class="dot ${i === state.sliderIdx ? 'is-active' : ''}" data-index="${i}"></b>`
+  ).join('');
+
+  document.querySelectorAll('.dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      const el = e.target as HTMLElement | null;
+      const idxAttr = el?.dataset?.index;
+      if (typeof idxAttr === 'undefined') return;
+      const index = parseInt(idxAttr, 10);
+      if (Number.isFinite(index)) {
+        showSlide(index);
+        startSlider();
+      }
+    });
+  });
+}
+
+// ===== LOGIC =====
+function applyLang(lang: 'en' | 'ar') {
   state.lang = lang;
   const dict = I18N_DATA[lang];
-  DOMElements.html.lang = (lang === 'ar' ? 'ar' : 'en');
-  DOMElements.html.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+  const { html } = getDOM();
+  html.lang = (lang === 'ar' ? 'ar' : 'en');
+  html.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) el.innerHTML = dict[key];
+    const key = el.getAttribute('data-i18n')!;
+    if ((dict as any)[key] !== undefined) el.innerHTML = (dict as any)[key];
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+    const key = el.getAttribute('data-i18n-placeholder')!;
+    if ((dict as any)[key] !== undefined) el.setAttribute('placeholder', (dict as any)[key]);
   });
   localStorage.setItem('lang', lang);
 }
 
-function handleWhatsAppSend() {
-  const name = (document.getElementById('fName') as HTMLInputElement).value.trim();
-  const phone = (document.getElementById('fPhone') as HTMLInputElement).value.trim();
-  const email = (document.getElementById('fEmail') as HTMLInputElement).value.trim();
-  
-  DOMElements.formMsg.textContent = ''; // Clear previous messages
-  
-  const formAlerts = I18N_DATA[state.lang].formAlerts;
-
-  if (!name) {
-    DOMElements.formMsg.textContent = formAlerts.nameMissing;
-    return;
-  }
-  
-  if (!phone) {
-    DOMElements.formMsg.textContent = formAlerts.phoneMissing;
-    return;
-  }
-  
-  const phoneRegex = /^01\d{9}$/;
-  if (!phoneRegex.test(phone)) {
-      DOMElements.formMsg.textContent = formAlerts.phoneInvalid;
-      return;
-  }
-  
-  if (email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      DOMElements.formMsg.textContent = formAlerts.emailInvalid;
-      return;
-    }
-  }
-  
-  const dict = I18N_DATA[state.lang].whatsAppMsg;
-  const parts = [
-    `${dict.name}: ${name}`,
-    `${dict.phone}: ${phone}`
-  ];
-  if (email) {
-    parts.push(`${dict.email}: ${email}`);
-  }
-  if (state.selectedProperty) {
-    parts.push(`${dict.property}: ${state.selectedProperty}`);
-  }
-  parts.push(dict.footer);
-  
-  const text = encodeURIComponent(parts.join('\n'));
-  window.open(`https://wa.me/201099993903?text=${text}`, '_blank');
-  state.selectedProperty = null; // Reset after sending
-}
-
-// ===== SLIDER LOGIC =====
-function showSlide(n) {
-  const slides = document.querySelectorAll('.slide');
-  slides[state.sliderIdx].classList.remove('is-active');
+function showSlide(n: number) {
+  const slides = document.querySelectorAll<HTMLElement>('.slide');
+  if (slides.length === 0) return;
+  slides[state.sliderIdx]?.classList.remove('is-active');
   state.sliderIdx = (n + slides.length) % slides.length;
-  slides[state.sliderIdx].classList.add('is-active');
-  
-  const dots = document.querySelectorAll('.dot');
+  slides[state.sliderIdx]?.classList.add('is-active');
+
+  const dots = document.querySelectorAll<HTMLElement>('.dot');
   dots.forEach(d => d.classList.remove('is-active'));
-  if (dots[state.sliderIdx]) {
-    dots[state.sliderIdx].classList.add('is-active');
-  }
+  dots[state.sliderIdx]?.classList.add('is-active');
 }
 
 function startSlider() {
   stopSlider();
   state.sliderTimer = setInterval(() => showSlide(state.sliderIdx + 1), 5000);
 }
-
 function stopSlider() {
   if (state.sliderTimer) clearInterval(state.sliderTimer);
 }
 
-function renderDots() {
-    DOMElements.dotsContainer.innerHTML = SLIDES_DATA.map((_, i) =>
-        `<b class="dot ${i === state.sliderIdx ? 'is-active' : ''}" data-index="${i}"></b>`
-    ).join('');
-    
-    document.querySelectorAll('.dot').forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            // FIX: Cast e.target to HTMLElement to access 'dataset' property.
-            const index = parseInt((e.target as HTMLElement).dataset.index, 10);
-            showSlide(index);
-            startSlider();
-        });
-    });
+function handleWhatsAppSend() {
+  const name = (document.getElementById('fName') as HTMLInputElement | null)?.trim?.() ?? (document.getElementById('fName') as HTMLInputElement | null)?.value?.trim() ?? '';
+  const phone = (document.getElementById('fPhone') as HTMLInputElement | null)?.value?.trim() ?? '';
+  const email = (document.getElementById('fEmail') as HTMLInputElement | null)?.value?.trim() ?? '';
+  const { formMsg } = getDOM();
+  if (formMsg) formMsg.textContent = '';
+
+  const formAlerts = I18N_DATA[state.lang].formAlerts;
+
+  if (!name) { formMsg && (formMsg.textContent = formAlerts.nameMissing); return; }
+  if (!phone) { formMsg && (formMsg.textContent = formAlerts.phoneMissing); return; }
+  const phoneRegex = /^01\d{9}$/;
+  if (!phoneRegex.test(phone)) { formMsg && (formMsg.textContent = formAlerts.phoneInvalid); return; }
+  if (email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) { formMsg && (formMsg.textContent = formAlerts.emailInvalid); return; }
+  }
+
+  const dict = I18N_DATA[state.lang].whatsAppMsg;
+  const parts = [
+    `${dict.name}: ${name}`,
+    `${dict.phone}: ${phone}`
+  ];
+  if (email) parts.push(`${dict.email}: ${email}`);
+  if (state.selectedProperty) parts.push(`${dict.property}: ${state.selectedProperty}`);
+  parts.push(dict.footer);
+
+  const text = encodeURIComponent(parts.join('\n'));
+  window.open(`https://wa.me/201099993903?text=${text}`, '_blank');
+  state.selectedProperty = null;
 }
 
-
-// ===== EVENT LISTENERS SETUP =====
+// ===== EVENTS =====
 function attachBookingButtonListeners() {
-  document.querySelectorAll('.book').forEach(btn => {
+  document.querySelectorAll<HTMLButtonElement>('.book').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       state.selectedProperty = btn.getAttribute('data-property-title');
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-      // Optional: Highlight the form or show a message
-      const formTitle = document.querySelector('#contact .section-title');
-      formTitle.textContent = `Inquiring about: ${state.selectedProperty}`;
-      setTimeout(() => formTitle.textContent = I18N_DATA[state.lang].formTitle, 3000);
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+
+      const formTitle = document.querySelector<HTMLElement>('#contact .section-title');
+      if (formTitle) {
+        formTitle.textContent = `Inquiring about: ${state.selectedProperty}`;
+        setTimeout(() => { formTitle.textContent = I18N_DATA[state.lang].formTitle; }, 3000);
+      }
     });
   });
 }
 
 function initEventListeners() {
-  // Slider Controls
-  document.getElementById('next').addEventListener('click', () => { showSlide(state.sliderIdx + 1); startSlider(); });
-  document.getElementById('prev').addEventListener('click', () => { showSlide(state.sliderIdx - 1); startSlider(); });
-  document.querySelector('.hero').addEventListener('mouseenter', stopSlider);
-  document.querySelector('.hero').addEventListener('mouseleave', startSlider);
+  document.getElementById('next')?.addEventListener('click', () => { showSlide(state.sliderIdx + 1); startSlider(); });
+  document.getElementById('prev')?.addEventListener('click', () => { showSlide(state.sliderIdx - 1); startSlider(); });
+  document.querySelector('.hero')?.addEventListener('mouseenter', stopSlider);
+  document.querySelector('.hero')?.addEventListener('mouseleave', startSlider);
 
-  // Form
-  document.getElementById('whatsSend').addEventListener('click', handleWhatsAppSend);
+  document.getElementById('whatsSend')?.addEventListener('click', handleWhatsAppSend);
 
-  // Cookie Bar
   const cookieBar = document.getElementById('cookieBar');
-  if (!localStorage.getItem('cookie_ack')) { cookieBar.classList.add('show'); }
-  document.getElementById('cookieOk').addEventListener('click', () => {
+  if (cookieBar && !localStorage.getItem('cookie_ack')) cookieBar.classList.add('show');
+  document.getElementById('cookieOk')?.addEventListener('click', () => {
     localStorage.setItem('cookie_ack', '1');
-    cookieBar.classList.remove('show');
+    cookieBar?.classList.remove('show');
   });
 
-  // Theme Toggle
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    DOMElements.html.classList.toggle('light');
-    localStorage.setItem('theme', DOMElements.html.classList.contains('light') ? 'light' : 'dark');
+  document.getElementById('themeToggle')?.addEventListener('click', () => {
+    const { html } = getDOM();
+    html.classList.toggle('light');
+    localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
   });
 
-  // Language Toggle
-  document.getElementById('langToggle').addEventListener('click', () => {
+  document.getElementById('langToggle')?.addEventListener('click', () => {
     applyLang(state.lang === 'ar' ? 'en' : 'ar');
   });
-  
-  // QR Modal
+
   const qrOpen = document.getElementById('qrOpen');
   const qrModal = document.getElementById('qrModal');
   const qrClose = document.getElementById('qrClose');
   if (qrOpen && qrModal) {
     qrOpen.addEventListener('click', (e) => { e.preventDefault(); qrModal.classList.add('show'); });
-    qrClose.addEventListener('click', () => qrModal.classList.remove('show'));
+    qrClose?.addEventListener('click', () => qrModal.classList.remove('show'));
     qrModal.addEventListener('click', (e) => { if (e.target === qrModal) qrModal.classList.remove('show'); });
   }
 
-  // Segmented Tabs (About/Location)
-  const tabBtns = [...document.querySelectorAll('.seg-btn')];
-  const tabPanels = [...document.querySelectorAll('.panel')];
-  tabBtns.forEach(btn => btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('is-active'));
-    btn.classList.add('is-active');
-    tabPanels.forEach(p => p.classList.remove('show'));
-    // FIX: Cast btn to HTMLElement to access 'dataset' property.
-    const targetPanel = document.getElementById((btn as HTMLElement).dataset.target);
-    if (targetPanel) targetPanel.classList.add('show');
-  }));
-
-  // Property Search
-  DOMElements.propertySearch.addEventListener('keyup', () => {
-    const searchTerm = (DOMElements.propertySearch as HTMLInputElement).value.toLowerCase().trim();
-    const filteredProperties = PROPERTIES_DATA.filter(prop => 
-      prop.title.toLowerCase().includes(searchTerm)
-    );
-    renderProperties(filteredProperties);
+  const { propertySearch } = getDOM();
+  propertySearch?.addEventListener('keyup', () => {
+    const searchTerm = propertySearch.value.toLowerCase().trim();
+    const filtered = PROPERTIES_DATA.filter(p => p.title.toLowerCase().includes(searchTerm));
+    renderProperties(filtered);
   });
 }
 
-// ===== INITIALIZATION =====
+// ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
-  // Initial Renders
   renderSlides();
   renderProperties();
   renderDots();
 
-  // Load preferences from localStorage
+  // Prefs
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') DOMElements.html.classList.add('light');
-  
+  if (savedTheme === 'light') document.documentElement.classList.add('light');
+
   const savedLang = localStorage.getItem('lang');
   applyLang(savedLang === 'ar' ? 'ar' : 'en');
-  
-  // Setup all event listeners
+
   initEventListeners();
-  
-  // Start slider
   startSlider();
+
+  // Dev checks (بدل ما نكسر الصفحة)
+  const missing: string[] = [];
+  if (!document.getElementById('slides')) missing.push('#slides');
+  if (!document.getElementById('galleryGrid')) missing.push('#galleryGrid');
+  if (missing.length) console.warn('[ui] Missing elements:', missing.join(', '));
 });
